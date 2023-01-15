@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { UserIdContext } from "../AppContext";
-import "../../style/NewsFeed.css"
-import userPicture from "../../images/user.png"
+import "../../style/NewsFeed.css";
 import addImage from "../../images/add-image.svg"
 import axios from "axios";
 
@@ -56,13 +54,10 @@ const AddPost = () =>{
 
     return (
 
-        <>
+        <div className="form-container">
 
             <div className="header-form-container">
 
-                <NavLink to='/profil' className="user-img">
-                        <img src={userPicture} alt="Profil"/>
-                </NavLink>
             </div>
 
             <div className="body-form-container">
@@ -110,7 +105,7 @@ const AddPost = () =>{
                 
             </div>
 
-        </>
+        </div>
     )
 }
 

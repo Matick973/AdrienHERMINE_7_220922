@@ -60,3 +60,25 @@
     transform: scale(1.05);
     transition: 0.5s;
 }
+
+@media only screen and (max-width: 650px) {
+
+    .navbarItems {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: inherit;
+        text-decoration: inherit;
+        margin-right: 1%;
+        padding: 1%;
+    }
+
+    .logout-container button{
+        font-size: 1rem;
+        padding: 10px 18px;
+        margin: 4px;
+ 
+    }
+}

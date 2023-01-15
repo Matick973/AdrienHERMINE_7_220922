@@ -22,7 +22,7 @@ const ProfilPage = () => {
             withCredentials: true,
         })
 
-        .then((res) => { console.log(res);
+        .then((res) => { //console.log(res);
             
             setPseudo(res.data.User.pseudo);
             setSince(res.data.User.createdAt);

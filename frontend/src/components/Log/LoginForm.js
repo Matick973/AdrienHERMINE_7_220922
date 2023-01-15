@@ -22,7 +22,7 @@ const LoginForm = () => {
                 console.log(response.data.error)
                 displayLoginError.innerHTML = response.data.error;
             } else {
-                console.log(response)
+                //console.log(response)
                 window.location = "/newsfeed";
             }
         })
