@@ -1,0 +1,210 @@
+.feed-container{
+display: flex;
+align-items: center;
+flex-direction: column;
+margin: auto;
+background: linear-gradient(to bottom, #0000, #FFD7D7);
+}
+
+ul{
+  padding: 0%;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fed;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem;
+}
+
+.post-card {
+  background: #fff;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  
+  content: " ";
+  animation: bottom-to-top 2s ease-in-out forwards;
+  animation-delay: 250ms;
+  opacity: 0;
+}
+
+@keyframes bottom-to-top {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.post-card-body {
+  padding: 2rem 6rem 2rem 6rem;
+}
+
+.user-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  width: 6rem;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  z-index: 10;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  position: absolute;
+  left: -10%;
+  top: -13%;
+}
+
+.user-img img {
+  height: 5rem;
+  width: 5rem;
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.post-card-body h5 {
+  font-size: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  text-align: end;
+}
+
+.post-card-body h4 {
+  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0px;
+}
+
+.post-card-body p {
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: #333;
+}
+
+.card-pic {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px ;
+}
+
+.card-pic img{
+  border-radius: 10px ;
+  max-width: 350px;
+}
+
+.comments-btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 1.2rem 1.6rem;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.comments-btn:hover {
+  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+.dltBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  position: absolute;
+  right: 5px;
+  color: #FD2D01;
+  margin: 10px;
+}
+
+.updateBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: 0px;
+  left : -30px
+}
+
+.updateBtn img{
+  width: 18px;
+  margin: 10px;
+}
+
+.like-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: -30px;
+  left : 80px
+}
+
+.like-container img{
+width: 25px;
+margin: 10px;
+}
+
+.like-filled {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(81%) saturate(6877%) hue-rotate(2deg) brightness(103%) contrast(103%);
+  /*https://angel-rs.github.io/css-color-filter-generator/*/
+}
+
+/*@media only screen and (max-width: 650px) {
+}*/
