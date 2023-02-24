@@ -88,8 +88,8 @@ exports.allUsers = (req, res, next) => {
 // Logique métier modification utilisateur :
 exports.modifyUser = (req, res, next) => {
 
-    const userObject = req.file ? {
-        ...JSON.parse(req.body.user),
+    const userObject = req.file ? 
+    {    
         image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     } : { ...req.body };
 
@@ -99,13 +99,12 @@ exports.modifyUser = (req, res, next) => {
 
         .then((modifiedUser) => {
 
-            if (modifiedUser.id != req.auth.userId) {
+            if (modifiedUser.id != req.auth.userId && !req.auth.admin) {
 
                 res.status(401).json({ message: 'Not authorized' });
             } else {
 
-                User.updateOne({ "_id": (req.params.id) }, { ...userObject, $set: { bio: req.body.bio, } })
-
+                User.updateOne({ "_id": (req.params.id) }, { ...userObject }, { new: true })
                     .then(() => res.status(200).json({ modifiedUser }))
                     .catch(error => res.status(401).json({ error }));
             }

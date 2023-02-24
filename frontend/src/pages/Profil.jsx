@@ -12,15 +12,11 @@ function Profil() {
     return (
         <div className="profil-page">
             {uid ? (
-                <>
-
-                <h1>Page Profil - En développement !</h1> 
-
+                
                 <div className='user-profil'>
                     <ProfilPage/>
                 </div>
 
-                </>
             ) : (
             <div className="log-container">
             <Log login={false} signup={true}/>

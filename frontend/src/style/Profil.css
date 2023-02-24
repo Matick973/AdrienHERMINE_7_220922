@@ -1,6 +1,7 @@
 .user-profil{
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .profil-card{
@@ -20,12 +21,6 @@
       align-items: center;
 }
   
-.profil-card-body img{
-    height: 170px;
-    border-radius: 50%;
-    margin-bottom:10px;
-}
-  
 .profil-card-body h3{
       font-size: 40px;
       font-weight: 400;
@@ -42,9 +37,113 @@
       width: 90%;
       text-align: center;
   }
-  
-.followe-me{
-      width: 30%;
-      display: flex;
-      justify-content: space-evenly;
-  }
+
+.update-picture-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-addImage{
+    width: 30px;
+    margin: 1%;
+}
+
+.profil-picture-preview img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.span-input-update{
+    display: inline-flex;
+}
+
+#profil-picture{
+    margin: 3%;
+}
+
+.profil-picture img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profil-updateBtn{
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    bottom: 20px;
+    left : 20px
+}
+      
+.profil-updateBtn img{
+    width: 20px;
+    margin: 10px;
+      
+}
+
+.profil-updateBtn img:hover{
+    transition: all .3s ease-in-out;
+    transform: scale(1.3);
+}
+
+.disable-btn button{
+    border: 0;
+    border-radius: 50px;
+    padding: 6%;
+    min-width: 125px;
+    margin-top: 10%;
+    background-color: #FFD7D7;
+    font-weight: bold;
+}
+
+.disable-btn button:hover{
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+    background-color: rgba(243, 36, 21, 0.774);
+}
+
+.updates-btn {
+    flex-wrap: nowrap;
+    display: inline-flex;
+    margin: 1%;
+}
+
+.update-btn-check {
+    border: 0;
+    border-radius: 50px;
+    padding: 4%;
+    margin: 3%;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.update-btn-check:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+    background-color: rgba(130, 240, 27, 0.774);
+}
+
+.update-btn-cancel {
+    border: 0;
+    border-radius: 50px;
+    padding: 4%;
+    margin: 3%;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.update-btn-cancel:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+    background-color: rgba(243, 36, 21, 0.774);
+}
+
+#updateBio{
+    height: 140px;
+    width: 250px;
+    font-size: 1.05rem;
+}

@@ -23,6 +23,13 @@ margin-top: 30px;
 
 .picture-preview img{
     width: 350px;
+    padding: 3%;
+}
+
+.body-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-form-container{
@@ -88,6 +95,11 @@ margin-top: 30px;
 
 .body-form-container textarea{
     width: 80%;
+}
+
+.picture-preview img{
+    width: 300px;
+    padding: 3%;
 }
 
 }

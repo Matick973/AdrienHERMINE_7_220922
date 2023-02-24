@@ -3,8 +3,22 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
-  background: linear-gradient(to bottom, #0000, #FFD7D7);
-  }
+  /*background: linear-gradient(to bottom, #0000, #FFD7D7);*/
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+      170deg, 
+      rgba(255, 255, 255, 1) 43%,
+      rgba(253, 45, 0, 1) 80%,
+      rgba(255, 215, 215, 1)100%
+  );  
+  animation: AnimateBG 8s ease-in-out infinite;
+}
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
 ul{
   padding: 0%;
@@ -61,7 +75,7 @@ ul{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 4rem;
+  margin: 5rem;
 }
 
 .post-card {
@@ -87,7 +101,7 @@ ul{
 }
 
 .post-card-body {
-  padding: 2rem 6rem 2rem 6rem;
+  padding: 2rem 4rem 2rem 4rem;
 }
 
 .user-img {
@@ -112,11 +126,11 @@ ul{
   border-radius: 100%;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   z-index: 1;
+  object-fit: cover;
 }
 
 .post-card-body h5 {
   font-size: 0.5rem;
-  margin: 0 0 0.5rem 0;
   color: #999;
   text-align: end;
 }
@@ -167,10 +181,16 @@ ul{
   justify-content: center;
   align-items: center;
   font-weight: 900;
+  font-size: 1.1rem;
   position: absolute;
   right: 5px;
   color: #FD2D01;
   margin: 10px;
+}
+
+.dltBtn:hover{
+  transition: all .3s ease-in-out;
+  transform: scale(1.3);
 }
 
 .updateBtn {
@@ -180,6 +200,11 @@ ul{
   position: relative;
   bottom: 0px;
   left : -30px
+}
+
+.updateBtn img:hover{
+  transition: all .3s ease-in-out;
+  transform: scale(1.3);
 }
 
 .updateBtn img{
@@ -193,17 +218,29 @@ ul{
   align-items: center;
   position: relative;
   bottom: -30px;
-  left : 80px
+  left : 55px
 }
 
 .like-container img{
 width: 25px;
-margin: 10px;
+margin: 6px 6px 10px 6px;
 }
+
+.like-container img:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(81%) saturate(6877%) hue-rotate(2deg) brightness(103%) contrast(103%);
+}
+
 
 .like-filled {
   filter: brightness(0) saturate(100%) invert(36%) sepia(81%) saturate(6877%) hue-rotate(2deg) brightness(103%) contrast(103%);
   /*https://angel-rs.github.io/css-color-filter-generator/*/
+}
+
+.counter{
+  font-size: smaller;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 450px) {
@@ -229,8 +266,8 @@ margin: 10px;
 .user-img {
   height: 4rem;
   width: 4rem;
-  left: -5%;
-  top: -5%;
+  left: 40%;
+  top: -14%;
 }
 
 .user-img img {
@@ -242,6 +279,7 @@ margin: 10px;
   bottom: -10px;
   left: 40px;
 }
+
 .like-container img {
   width: 20px;
   margin: 10px;

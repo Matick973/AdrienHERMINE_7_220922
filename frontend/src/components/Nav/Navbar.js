@@ -18,7 +18,7 @@ const NavBar = () => {
         return (
             <nav className="navbarItems">
                 <div className="logo-container">
-                    <NavLink to='/' className="nav-link">
+                    <NavLink to='/newsfeed' className="nav-link">
                     <div className="logo" >
                         <img src={logo} alt="Logo Groupomania"/>
                         <h3> Groupomania </h3>

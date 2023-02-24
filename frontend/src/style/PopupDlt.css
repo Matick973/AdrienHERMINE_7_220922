@@ -1,0 +1,81 @@
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-top: 50px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.container {
+    padding: 5%;
+    text-align: center;
+}
+
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+#modalCancelBtn {
+    border: 0;
+    border-radius: 35px;
+    padding: 6%;
+    margin: 6%;
+    font-weight: bold;
+    background-color: #ccc;
+    color: black;
+}
+
+#modalDeleteBtn {
+    border: 0;
+    border-radius: 35px;
+    padding: 6%;
+    margin: 6%;
+    font-weight: bold;
+    background-color: #f44336;
+}
+
+.close-modal {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.choiceBtn::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  #modalCancelBtn, #modalDeleteBtn {
+    width: 100%;
+  }
+}
+
+/*https://www.youtube.com/watch?v=9DwGahSqcEc&ab_channel=TheWebSchool.*/

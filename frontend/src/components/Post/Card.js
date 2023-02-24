@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom"
 import { UserIdContext } from "../AppContext";
 import { AdminContext } from "../AppContext";
 import axios from "axios";
@@ -8,11 +7,9 @@ import DltButton from "./DltButton";
 import LikeButton from "./LikeButton";
 
 import "../../style/Card.css"
-import userPicture from "../../images/user.png"
+//import userPicture from "../../images/user.png"
 import editPost from "../../images/edit-pen-icon.svg"
 import addImage from "../../images/add-image.svg"
-
-
 
 
 const Card = ({ post }) => {
@@ -82,8 +79,9 @@ const Card = ({ post }) => {
                 })
 
             .then((res) => { 
-     
+
                 setUsers(res.data.User)
+                
             })
 
             .catch((err) => console.log(err, "No Match"))
@@ -103,20 +101,27 @@ const Card = ({ post }) => {
     return (
         <li className="card-container"  >
             
-            {isLoading ? ( <div className="lds-ripple"><div></div><div></div></div>)            // Animation de chagement
+            {isLoading ? ( <div className="lds-ripple"><div></div><div></div></div>)            // Animation de chargement
      
             : (
                 
             <div className="post-card">
-                <NavLink to='/profil/' className="user-img">
-                    <img src={userPicture} alt="Profil"/>
-                </NavLink>
+                <div className="user-img">
+                    <img 
+                        src={users.map((user, key) => {
+
+                        if (user._id === post.userId) 
+                        return user.image
+                        else return null
+
+                    }).join('')} alt="Pic Profil Utilisateur "/>
+                </div>
 
                 {isUid || admin ? <DltButton post={post}/> : null}
                 {isUid || admin ? <div className="updateBtn" onClick={ () => setUpdating(!updating)}> <img src ={editPost} alt=''/> </div> : null }
 
                 <div className="post-card-body">
-                    <h5>{dateParser(post.createdAt)}</h5> 
+                    
                     <h4>
                         {users.map((user, key) => {
 
@@ -162,9 +167,12 @@ const Card = ({ post }) => {
                         </div>
                     )}
                     
-                    {updating && <button className="post-Btn" onClick={ updatePost }> Valider la modifications </button>}
+                    {updating && <button className="post-Btn" onClick={ updatePost }> Valider les modifications </button>}
                     
+                    <h5>{dateParser(post.createdAt)}</h5> 
+
                     <LikeButton post={post}/>
+
                     <button className="comments-btn" href='#' target="_blank">Lire les commentaires</button>
                 </div>
                 
