@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+/*import { createSlice } from "@reduxjs/toolkit"
 
 export const postSlice = createSlice({
     name: 'post',
@@ -31,4 +31,4 @@ export const postSlice = createSlice({
 
 export const { createPost, allPost, modifyPost, deletePost, likePost } = postSlice.actions
 
-export default postSlice.reducer
+export default postSlice.reducer*/

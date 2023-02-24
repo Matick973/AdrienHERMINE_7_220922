@@ -3,8 +3,6 @@ import Routes from './components/Routes';
 import { UserIdContext } from './components/AppContext';
 import { AdminContext } from './components/AppContext';
 import axios from 'axios';
-import { oneUser } from './feature/user.slice';
-
 
 function App() {
 

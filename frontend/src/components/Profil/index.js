@@ -90,8 +90,6 @@ const ProfilPage = () => {
         }
     }
 
-
-
     return(
 
         <div className="profil-card">

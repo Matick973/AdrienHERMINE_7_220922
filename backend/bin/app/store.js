@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit"
+/*import { configureStore } from "@reduxjs/toolkit"
 import postSlice from "../feature/post.slice";
 import userSlice from "../feature/user.slice";
 
@@ -7,4 +7,4 @@ export default configureStore({
         user: userSlice,
         post: postSlice,
     },
-});
+});*/
